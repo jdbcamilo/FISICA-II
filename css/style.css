@@ -134,9 +134,10 @@ li {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    z-index: 1000;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
         margin-right: 50px; /* Espacio para el botón de menú */
@@ -153,7 +154,12 @@ li {
     nav {
         display: none;
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--nav-bg);
+        z-index: 999;
     }
 
     nav.show {
@@ -163,7 +169,13 @@ li {
     nav a {
         width: 100%;
         text-align: center;
-        margin: 0.25rem 0;
+        padding: 1rem;
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
     }
 
     main {
@@ -192,4 +204,14 @@ li {
     header p {
         font-size: 0.8rem;
     }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-content {
+    animation: fadeIn 0.5s ease-in;
 }
