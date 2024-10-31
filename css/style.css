@@ -19,6 +19,7 @@ header {
     background-color: var(--header-bg);
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
 
 h1 {
@@ -128,13 +129,17 @@ li {
     background: none;
     border: none;
     font-size: 30px;
-    cursor: pointer;
     color: var(--text-color);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 1.8rem;
+        margin-right: 50px; /* Espacio para el botón de menú */
     }
 
     header p {
@@ -143,9 +148,6 @@ li {
 
     #menu-toggle {
         display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
     }
 
     nav {
@@ -178,5 +180,16 @@ li {
 
     iframe {
         height: 200px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
     }
 }
