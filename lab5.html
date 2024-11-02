@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 5 - LABORATORIOS DE FÍSICA II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* Estilo adicional para hacer las imágenes responsive */
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto; /* Mantiene la relación de aspecto */
+            border-radius: 5px; /* Opcional: añade bordes redondeados */
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+            height: auto; /* Mantiene la relación de aspecto */
+            border-radius: 5px; /* Opcional: añade bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate-title">LABORATORIOS DE FÍSICA II</h1>
+        <p class="animate-subtitle">Grupo conformado por Juan Camilo Diaz, Jesus Manuel Arteaga, Jose Alejandro Pantoja y Sebastian Pretel</p>
+    </header>
+
+    <!-- Botón de menú hamburguesa -->
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="lab1.html">Laboratorio 1</a>
+        <a href="lab2.html">Laboratorio 2</a>
+        <a href="lab3.html">Laboratorio 3</a>
+        <a href="lab4.html">Laboratorio 4</a>
+        <a href="lab5.html" class="active">Laboratorio 5</a>
+        <a href="lab6.html">Laboratorio 6</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>MEDIDA DE TENSIÓN: Tensión nominal y Tensión de funcionamiento</h2>
+
+            <h3>Objetivos</h3>
+            <ol>
+                <li>Medir la tensión correctamente, utilizando el multímetro en la posición de voltímetro.</li>
+                <li>Utilizar la escala apropiada del voltímetro cuando se vayan a medir tensiones.</li>
+                <li>Ajustar la tensión de funcionamiento de las lámparas utilizando el voltímetro y conociendo la tensión nominal.</li>
+            </ol>
+
+            <h3>Materiales a usar</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Materiales</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Panel de montajes</td><td>1</td></tr>
+                    <tr><td>Interruptor</td><td>1</td></tr>
+                    <tr><td>Portalámparas</td><td>1</td></tr>
+                    <tr><td>Lámpara</td><td>-</td></tr>
+                    <tr><td>Cables de conexión</td><td>4</td></tr>
+                    <tr><td>Conectores</td><td>10</td></tr>
+                    <tr><td>Fuente de voltaje</td><td>1</td></tr>
+                    <tr><td>Multímetro Digital</td><td>1</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Montaje y procedimiento</h3>
+            <figure>
+                <!-- Imagen del circuito eléctrico -->
+                <img src="evidencias/LAB5/imagen1.png" alt="Circuito eléctrico" />
+                <figcaption>Figura 1. Circuito eléctrico.</figcaption>
+            </figure>
+
+            <ol type="I">
+                <li>Monta el circuito según el esquema de la figura 1. Verifica los valores nominales de las lámparas a usar y anótalos en la tabla 1.</li>
+                <li>Con la fuente apagada, coloca en el portalámparas la lámpara a estudiar (preferiblemente la de menor voltaje).</li>
+                <li>Con el interruptor abierto, enciende la fuente y con ayuda del voltímetro, ajusta la fuente al valor del voltaje nominal de la lámpara (si no es posible, toma un valor cercano), reportar este valor en la segunda columna de la tabla 1.</li>
+                <li>Abrir el interruptor y vuelve a calibrar el valor de la fuente; a veces el valor del voltaje de la fuente cae al cerrar el interruptor.</li>
+                <li>Mide el voltaje que le llega a la lámpara y repórtalo en la tercera columna de la tabla 1; observa el brillo de la lámpara y haz la respectiva anotación.</li>
+                <li>Baja el voltaje de la fuente, observa el brillo de la lámpara y realiza la correspondiente anotación.</li>
+            </ol>
+
+            <h3>Tabla 1. Medidas de tensión</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Referencia nominal de la lámpara</th>
+                        <th>Tensión de la fuente (V)</th>
+                        <th>Tensión de funcionamiento (V)</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-medidas">
+                    <!-- Aquí puedes agregar filas para los datos -->
+                    <!-- Ejemplo: -->
+                    <!--
+                    <tr><td>Lámpara A</td><td></td><td></td></tr> 
+                    -->
+                </tbody>
+            </table>
+
+            <h3>Evidencias</h3>
+
+            <!-- Galería de imágenes -->
+            <div class="image-gallery">
+                <!-- Asegúrate de que las rutas sean correctas -->
+                <img src="evidencias/LAB5/1.jpg" alt="Imagen 1" class="zoomable">
+                <img src="evidencias/LAB5/2.jpg" alt="Imagen 2" class="zoomable">
+                <img src="evidencias/LAB5/3.jpg" alt="Imagen 3" class="zoomable">
+                <img src="evidencias/LAB5/4.jpg" alt="Imagen 4" class="zoomable">
+                <img src="evidencias/LAB5/5.jpg" alt="Imagen 5" class="zoomable">
+                <img src="evidencias/LAB5/6.jpg" alt="Imagen 6" class="zoomable">
+                <img src="evidencias/LAB5/7.jpg" alt="Imagen 7" class="zoomable">
+            </div>
+
+            <!-- Evaluación -->
+            <h3>Evaluación</h3>
+            <ol type="1">
+                <li>¿Qué se debe tener en cuenta al conectar un aparato eléctrico a una fuente de corriente?</li>
+                <li>¿Qué se necesita cuando se quiere ajustar una tensión exacta a un circuito?</li>
+                <li>¿Cómo se denomina el tipo de conexión del voltímetro? ¿Por qué se utiliza esta conexión en particular para este caso?</li>
+                <li>¿Hay diferencias entre el voltaje de la fuente y el voltaje que le llega a la lámpara? Si su respuesta es afirmativa, dé una explicación.</li>
+            </ol>
+
+            <!-- Resultados -->
+            <h3>Resultados</h3>
+
+            <!-- Video embedido -->
+            <iframe src="https://www.youtube.com/watch?v=qVOtLb58uOs" frameborder="0" allowfullscreen></iframe>
+
+        </section>
+
+        <!-- Modal for Zoom -->
+        <div id="zoom-modal" class="modal">
+            <!-- Botón para cerrar el modal -->
+            <span class="close">&times;</span>
+
+            <!-- Contenido del modal para imágenes y videos -->
+            <!-- Imagen ampliada -->
+            <img class="modal-content" id="zoomed-image">
+
+            <!-- Video ampliado -->
+            <video class="modal-content" id="zoomed-video" controls></video>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <!-- Script principal para funcionalidades generales -->
+    <script src="js/main.js"></script>
+
+    <!-- Script para zoom en imágenes/videos -->
+    <script src="js/zoom.js"></script>
+
+</body>
+</html>
