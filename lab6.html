@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 6 - LABORATORIOS DE FÍSICA II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .image-gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate-title">LABORATORIOS DE FÍSICA II</h1>
+        <p class="animate-subtitle">Grupo conformado por Juan Camilo Diaz, Jesus Manuel Arteaga, Jose Alejandro Pantoja y Sebastian Pretel</p>
+    </header>
+
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="lab1.html">Laboratorio 1</a>
+        <a href="lab2.html">Laboratorio 2</a>
+        <a href="lab3.html">Laboratorio 3</a>
+        <a href="lab4.html">Laboratorio 4</a>
+        <a href="lab5.html">Laboratorio 5</a>
+        <a href="lab6.html" class="active">Laboratorio 6</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Circuito RC en Corriente Continua</h2>
+
+            <h3>Tópicos relacionados</h3>
+            <p>Condensador eléctrico, corriente continua, corriente alterna.</p>
+
+            <h3>Objetivos</h3>
+            <ol>
+                <li>Estudiar las curvas de tensión y corriente en la carga y la descarga de un condensador eléctrico.</li>
+                <li>Hallar los tiempos de relajación o constante de tiempo, para los circuitos RC utilizados.</li>
+            </ol>
+
+            <h3>Materiales a usar</h3>
+            <table border="1">
+                <tr>
+                    <th>Materiales</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr><td>Panel de montajes</td><td>1</td></tr>
+                <tr><td>Conmutador</td><td>1</td></tr>
+                <tr><td>Resistencia 10 kΩ</td><td>1</td></tr>
+                <tr><td>Resistencia 47 kΩ</td><td>1</td></tr>
+                <tr><td>Condensador 470 µF</td><td>1</td></tr>
+                <tr><td>Condensador 47 µF u otro valor</td><td>1</td></tr>
+                <tr><td>Cables de conexión</td><td>8</td></tr>
+                <tr><td>Fuente de alimentación</td><td>1</td></tr>
+                <tr><td>Multímetro</td><td>2</td></tr>
+            </table>
+
+            <h3>Montaje y procedimiento</h3>
+            <h4>Parte 1</h4>
+            <ol>
+                <li>Mida los valores de las resistencias a usar, antes de iniciar y reporte estos valores.</li>
+                <li>Monta el circuito según el esquema eléctrico de la figura 1, con el conmutador en la posición de descarga, además coloca el voltímetro en voltios y el amperímetro en la escala más pequeña de corriente.</li>
+                <li>Antes de iniciar el experimento descarga el condensador, puenteando sus contactos con un cable, asimismo, ten en cuenta que el condensador a usar tiene una polaridad definida.</li>
+                <li>Pon la tensión de funcionamiento a 10 V. Para ello conecta primero el puntero positivo del voltímetro al polo positivo de la fuente de corriente y el puntero negativo del voltímetro déjalo en el lado negativo del condensador.</li>
+                <li>Después de ajustar la tensión, regresa el puntero positivo del voltímetro al lado positivo del condensador, coloca el voltímetro y el amperímetro, de tal forma que puedas ver las medidas de ambos simultáneamente.</li>
+                <li>Con ayuda de un cronómetro, cierra primero el interruptor (enciende la fuente), y después el circuito de carga pulsando el conmutador hacia la izquierda (posición 1). Observa en el voltímetro la subida de la tensión en el condensador, asimismo en el amperímetro podrás observar las medidas de corriente. Reporta los datos de voltaje y corriente en las columnas 1 y 2 de la tabla 1.</li>
+                <li>Conmuta ahora al circuito de descarga (posición 2). Observa con el voltímetro la variación de tensión en el condensador. Reporta los datos de voltaje y corriente en las columnas 3 y 4 de la tabla 1.</li>
+                <li>Repite procesos de carga y descarga usando un resistor de 10 kΩ. Crea otra tabla, similar a la tabla 1, para anotar los datos.</li>
+            </ol>
+
+            <h3>Esquema de Montaje</h3>
+            <figure>
+                <img src="evidencias/LAB6/montaje.png" alt="Esquema de montaje del circuito RC" class="zoomable">
+                <figcaption>Figura 1. Esquema de montaje del circuito RC.</figcaption>
+            </figure>
+
+            <h4>Parte 2</h4>
+            <ol start="9">
+                <li>Usando el anterior circuito, pero sin el amperímetro, mida el tiempo que le toma al condensador de 470 µF cargarse hasta los 6 V, con el resistor de 47 kΩ y 10 kΩ. Reporte estos datos en la tabla 2.</li>
+                <li>Repite el paso anterior, pero con otro condensador de diferente capacitancia. Reporte estos datos en la tabla 2.</li>
+            </ol>
+
+            <h3>Tablas</h3>
+            <h4>Tabla 1. Tensiones y corriente de carga y descarga (capacitancia de 470 µF y resistencia de 47 kΩ)</h4>
+            <table border="1">
+                <tr>
+                    <th>t(s)</th>
+                    <th>Vc (V)</th>
+                    <th>Ic (µA)</th>
+                    <th>Vd (V)</th>
+                    <th>Id (µA)</th>
+                </tr>
+                <tr><td>0</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>10</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>15</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>20</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>25</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>30</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>40</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>50</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>60</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>70</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>80</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>90</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>100</td><td></td><td></td><td></td><td></td></tr>
+            </table>
+
+            <h4>Tabla 2. Tiempo empleado para que el condensador se cargue a 6 V</h4>
+            <table border="1">
+                <tr>
+                    <th>Capacitancia (µF)</th>
+                    <th>Resistencia (kΩ)</th>
+                    <th>Tiempo de carga (s)</th>
+                </tr>
+                <tr><td>470</td><td>10</td><td></td></tr>
+                <tr><td>470</td><td>47</td><td></td></tr>
+                <tr><td></td><td>10</td><td></td></tr>
+                <tr><td></td><td>47</td><td></td></tr>
+            </table>
+
+            <h3>Evaluación</h3>
+            <ol>
+                <li>Explique cualitativamente las observaciones hechas en el paso 1.</li>
+                <li>Usando los datos de la tabla 1, grafique V vs t, (ambas curvas en el mismo plano).</li>
+                <li>¿Qué tipo de gráfica obtiene? Correlaciónela con sus observaciones.</li>
+                <li>Realice el respectivo ajuste a las anteriores curvas y compare las ecuaciones características en ambos casos.</li>
+                <li>Mediante las ecuaciones anteriores obtenga la constante de tiempo para los circuitos RC utilizados.</li>
+                <li>Realice en el mismo plano cartesiano las gráficas de corriente de carga y descarga en función del tiempo (I vs t).</li>
+                <li>¿Qué tipo de gráfica se obtiene?</li>
+                <li>Realice el respectivo ajuste a las anteriores gráficas y compare los resultados.</li>
+                <li>Mediante las ecuaciones anteriores obtenga la constante de tiempo para los circuitos RC utilizados.</li>
+                <li>Calcule el valor teórico de τ y compárelo con el valor experimental obtenido mediante la ecuación del ajuste de las gráficas. Calcule el error en cada caso.</li>
+                <li>Explique los resultados que obtuvo en la tabla 2.</li>
+                <li>¿Qué sucede con las cargas en el condensador cuando este se descarga? ¿Se pierden las cargas?</li>
+            </ol>
+
+            <h3>Evidencias</h3>
+            <div class="video-gallery">
+                <video controls width="320">
+                    <source src="evidencias/LAB6/1.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <video controls width="320">
+                    <source src="evidencias/LAB6/2.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <video controls width="320">
+                    <source src="evidencias/LAB6/3.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <video controls width="320">
+                    <source src="evidencias/LAB6/4.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+
+            <h3>Resultados</h3>
+            <p>Video adicional:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hkyp0CUANrA" title="Video en YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <!-- Modal for Zoom -->
+        <div id="zoom-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="zoomed-image">
+            <video class="modal-content" id="zoomed-video" controls></video>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/zoom.js"></script>
+</body>
+</html>
