@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA RESISTENCIA COMO COMPONENTE - LABORATORIOS DE FÍSICA II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Asegura que las imágenes tengan el mismo tamaño */
+        section img {
+            width: 200px;    /* Ajusta el ancho a 200 píxeles */
+            height: 150px;   /* Ajusta la altura a 150 píxeles */
+            object-fit: cover; /* Mantiene la proporción y cubre el área sin distorsionar */
+            margin: 10px;     /* Espaciado entre imágenes */
+            transition: transform 0.3s ease; /* Efecto de transición al hacer hover */
+        }
+
+        /* Efecto de zoom */
+        .zoomable:hover {
+            transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+        }
+
+        /* Modal */
+        #zoom-modal {
+            display: none; /* Por defecto está oculto */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow: auto;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate-title">LABORATORIOS DE FÍSICA II</h1>
+        <p class="animate-subtitle">Grupo conformado por Juan Camilo Diaz, Jesus Manuel Arteaga, Jose Alejandro Pantoja y Sebastian Pretel</p>
+    </header>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="lab1.html">Laboratorio 1</a>
+        <a href="lab2.html">Laboratorio 2</a>
+        <a href="lab3.html">Laboratorio 3</a>
+        <a href="lab4.html">Laboratorio 4</a>
+        <a href="lab5.html">Laboratorio 5</a>
+        <a href="lab6.html">Laboratorio 6</a>
+        <a href="lab7.html" class="active">Laboratorio 7</a>
+        <a href="lab8.html">Laboratorio 8</a>
+        <a href="lab9.html">Laboratorio 9</a>
+        <a href="lab10.html">Laboratorio 10</a>
+    </nav>
+
+    <main>
+        <h2>LA RESISTENCIA COMO COMPONENTE</h2>
+
+        <section id="topicos">
+            <h3>Tópicos relacionados</h3>
+            <p>Componentes eléctricos, resistor, la resistencia, código de colores</p>
+        </section>
+
+        <section id="objetivos">
+            <h3>Objetivos</h3>
+            <ol>
+                <li>Estudiar la influencia de una resistencia sobre la intensidad de un circuito.</li>
+            </ol>
+        </section>
+
+        <section id="materiales">
+            <h3>Materiales a usar</h3>
+            <table>
+                <tr>
+                    <th>Materiales</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <td>Panel de montajes</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Interruptor</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Portalámparas</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Conectores</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Lámpara 12 V</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Resistencias (ver tabla 1)</td>
+                    <td>1 de cada valor</td>
+                </tr>
+                <tr>
+                    <td>Multímetro</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Cables de conexión</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Fuente de alimentación</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="procedimiento">
+            <h3>Montaje y procedimiento</h3>
+            <h4>Esquema eléctrico</h4>
+            <img src="evidencias/LAB7/MONTAJE.png" alt="Montaje del experimento" class="zoomable">
+            <ol type="I">
+                <li>Mida el valor de las resistencias a usar y anótelos en la tabla 1.</li>
+                <li>Monta un circuito sencillo como en la figura 1, pero sin resistencia, sólo con la lámpara.</li>
+                <li>Calibra la tensión de la fuente, a la tensión nominal de la lámpara. Mida la corriente y obsérvese el brillo de la lámpara, luego reporte los datos en la tabla 1.</li>
+                <li>Coloca sucesivamente en el circuito las resistencias a estudiar y observa el brillo de la lámpara. Mide en cada caso la intensidad del circuito en la escala adecuada y lleva los valores a la tabla 1.</li>
+                <li>Desenrosca la lámpara de su zócalo, y lee el valor de la intensidad que hay impreso en el zócalo (I nominal), registra este valor.</li>
+            </ol>
+        </section>
+
+        <section id="tabla1">
+            <h3>Tabla 1. Valores medidos y observaciones</h3>
+            <table>
+                <tr>
+                    <th>R nominal (Ω)</th>
+                    <th>R medida (Ω)</th>
+                    <th>Brillo de la lámpara</th>
+                    <th>Intensidad (A)</th>
+                </tr>
+                <tr>
+                    <td>Sin resistencia</td>
+                    <td>-</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>220</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1k</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10k</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>47k</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p>Intensidad de corriente nominal de la lámpara (el valor aparece en la lámpara): ________________</p>
+        </section>
+
+        <section id="evaluacion">
+            <h3>Evaluación</h3>
+            <ol>
+                <li>¿Qué sucede con el brillo de la lámpara a medida que colocas un resistor de mayor resistencia?</li>
+                <li>¿Con qué resistencia se observa mayor brillo en la lámpara?, ¿Qué te sugiere esto? Justifique</li>
+                <li>¿Se apaga la lámpara al colocar alguna de las resistencias? Explique.</li>
+                <li>¿Qué sucedería si el resistor se colocara en paralelo con la lámpara y no en serie?</li>
+            </ol>
+        </section>
+
+        <section id="bibliografia">
+            <h3>Bibliografía</h3>
+            <ul>
+                <li>Serway, R. Física Volumen 2. Ed. McGraw Hill</li>
+                <li>Tipler, P. Física Volumen 2. Ed. Reverté</li>
+                <li>Hewitt, P. Física Conceptual. Ed. Addison Wesley</li>
+                <li>Alonso, M. Finn, E. Física Volumen. Ed. Pearson</li>
+                <li>Halliday, D. Resnick R. Krane, K. Física Tomo 2. Ed. CECSA</li>
+                <li>Tippens, P. Física Fundamental. Ed. McGraw Hill</li>
+            </ul>
+        </section>
+
+        <!-- Sección de imágenes (Evidencias) -->
+        <section id="evidencias">
+            <h3>Evidencias</h3>
+            <img src="evidencias/LAB7/1.jpeg" alt="Evidencia 1" class="zoomable">
+            <img src="evidencias/LAB7/2.jpeg" alt="Evidencia 2" class="zoomable">
+            <img src="evidencias/LAB7/3.jpeg" alt="Evidencia 3" class="zoomable">
+            <img src="evidencias/LAB7/4.jpeg" alt="Evidencia 4" class="zoomable">
+            <img src="evidencias/LAB7/5.jpeg" alt="Evidencia 5" class="zoomable">
+        </section>
+
+        <section id="resultados">
+            <h3>Resultados</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2-xw2uPU2bk" title="Video en YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <div id="zoom-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomed-image">
+        <video class="modal-content" id="zoomed-video" controls></video>
+    </div>
+
+    <div class="button-container">
+        <a href="index.html" class="return-button">Regresar al Inicio</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/zoom.js"></script>
+
+    <!-- JavaScript para el modal -->
+    <script>
+        // Obtener las imágenes con clase "zoomable"
+        var images = document.querySelectorAll('.zoomable');
+        var modal = document.getElementById("zoom-modal");
+        var modalImg = document.getElementById("zoomed-image");
+        var modalVideo = document.getElementById("zoomed-video");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando una imagen es clickeada, abre el modal
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                modalVideo.style.display = "none"; // Asegúrate de ocultar el video si lo hay
+            };
+        });
+
+        // Cerrar el modal al hacer clic en la "X"
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+    </script>
+</body>
+</html>
+

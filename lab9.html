@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEYES DE KIRCHHOFF - LABORATORIOS DE FÍSICA II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        figure { margin: 0; padding: 0; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        section img { width: 200px; height: 150px; object-fit: cover; margin: 10px; transition: transform 0.3s ease; }
+        .zoomable:hover { transform: scale(1.2); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate-title">LABORATORIOS DE FÍSICA II</h1>
+        <p class="animate-subtitle">Grupo conformado por Juan Camilo Diaz, Jesus Manuel Arteaga, Jose Alejandro Pantoja y Sebastian Pretel</p>
+    </header>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="lab1.html">Laboratorio 1</a>
+        <a href="lab2.html">Laboratorio 2</a>
+        <a href="lab3.html">Laboratorio 3</a>
+        <a href="lab4.html">Laboratorio 4</a>
+        <a href="lab5.html">Laboratorio 5</a>
+        <a href="lab6.html">Laboratorio 6</a>
+        <a href="lab7.html">Laboratorio 7</a>
+        <a href="lab8.html">Laboratorio 8</a>
+        <a href="lab9.html" class="active">Laboratorio 9</a>
+        <a href="lab10.html">Laboratorio 10</a>
+    </nav>
+    <main>
+        <h2>LEYES DE KIRCHHOFF</h2>
+        <section id="topicos">
+            <h3>Tópicos relacionados</h3>
+            <p>Circuitos con resistencias en series y en paralelo, resistencia equivalente, Leyes de Kirchhoff.</p>
+        </section>
+        <section id="objetivos">
+            <h3>Objetivo</h3>
+            <p>Determinar experimentalmente el comportamiento de la intensidad de corriente y la tensión en un circuito mixto.</p>
+        </section>
+        <section id="materiales">
+            <h3>Materiales a usar</h3>
+            <table>
+                <tr>
+                    <th>Materiales</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr><td>Panel de montajes</td><td>1</td></tr>
+                <tr><td>Interruptor</td><td>1</td></tr>
+                <tr><td>Conectores</td><td>10</td></tr>
+                <tr><td>Resistencias (ver tabla 1)</td><td>1 de cada valor</td></tr>
+                <tr><td>Cables de conexión</td><td>6</td></tr>
+                <tr><td>Multímetro</td><td>2</td></tr>
+                <tr><td>Fuente de alimentación</td><td>1</td></tr>
+            </table>
+        </section>
+        <section id="procedimiento">
+            <h3>Montaje y procedimiento</h3>
+            <p>Mide los valores de las resistencias y anótalos en la tabla 1.</p>
+            <table>
+                <tr>
+                    <th>Resistencia nominal (Ω)</th>
+                    <th>Valor medido (Ω)</th>
+                </tr>
+                <tr><td>100</td><td></td></tr>
+                <tr><td>150</td><td></td></tr>
+                <tr><td>220</td><td></td></tr>
+                <tr><td>1k</td><td></td></tr>
+            </table>
+            <h4>Parte 1</h4>
+            <img src="evidencias/LAB9/MONTAJE1.png" alt="Circuito mixto 1" class="zoomable">
+            <ol type="I">
+                <li>Monta el circuito según el esquema 1 y ajusta la fuente a 8V</li>
+                <li>Mide las corrientes I1, I2, I3 e I4 del circuito, asimismo, mide las respectivas tensiones en los resistores V1, V2, V3 y V4. Anota estos valores en la tabla 2.</li>
+                <li>Apaga la fuente de alimentación</li>
+            </ol>
+            <h3>Tabla 2. Valores medidos de la intensidad y la tensión en los resistores parte 1</h3>
+            <table>
+                <tr>
+                    <th>V1 (V)</th>
+                    <th>V2 (V)</th>
+                    <th>V3 (V)</th>
+                    <th>V4 (V)</th>
+                    <th>I1 (mA)</th>
+                    <th>I2 (mA)</th>
+                    <th>I3 (mA)</th>
+                    <th>I4 (mA)</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+            <h4>Parte 2</h4>
+            <img src="evidencias/LAB9/MONTAJE2.png" alt="Circuito mixto 2" class="zoomable">
+            <ol type="I">
+                <li>Monta el circuito según el esquema 2 y ajusta la fuente a 8V</li>
+                <li>Mide las corrientes ITot., I1 e I2 del circuito, asimismo, mide las respectivas tensiones en los resistores V1, V2 y V3. Anota estos valores en la tabla 3.</li>
+                <li>Apaga la fuente de alimentación</li>
+            </ol>
+            <h3>Tabla 3. Valores medidos de la intensidad y la tensión en los resistores parte 2</h3>
+            <table>
+                <tr>
+                    <th>V1 (V)</th>
+                    <th>V2 (V)</th>
+                    <th>V3 (V)</th>
+                    <th>ITot (mA)</th>
+                    <th>I1 (mA)</th>
+                    <th>I2 (mA)</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+        </section>
+        <section id="evaluacion">
+            <h3>Evaluación</h3>
+            <ol>
+                <li>De las tensiones parciales registradas en las tablas 2 y 3, calcula la tensión total de cada circuito. ¿Qué concluyes?</li>
+                <li>De las corrientes parciales registradas en las tablas 2 y 3, calcula la corriente total de cada circuito. ¿Qué concluyes?</li>
+                <li>Compara la corriente que entra al nodo A de cada circuito con las corrientes que salen del mismo. ¿Qué concluyes?</li>
+                <li>Realiza la suma total de las tensiones en el circuito 1 y el circuito 2. ¿Qué concluyes de los resultados?</li>
+            </ol>
+        </section>
+        <section id="bibliografia">
+            <h3>Bibliografía</h3>
+            <ul>
+                <li>Serway, R. Física Volumen 2. Ed. McGraw Hill</li>
+                <li>Tipler, P. Física Volumen 2. Ed. Reverté</li>
+                <li>Hewitt, P. Física Conceptual. Ed. Addison Wesley</li>
+                <li>Alonso, M. Finn, E. Física Volumen. Ed. Pearson</li>
+                <li>Halliday, D. Resnick R. Krane, K. Física Tomo 2. Ed. CECSA</li>
+                <li>Tippens, P. Física Fundamental. Ed. McGraw Hill</li>
+            </ul>
+        </section>
+        <section id="evidencias">
+            <h3>Evidencias</h3>
+            <img src="evidencias/LAB9/1.jpeg" alt="Evidencia 1" class="zoomable">
+            <img src="evidencias/LAB9/2.jpeg" alt="Evidencia 2" class="zoomable">
+        </section>
+        <section id="resultados">
+            <h3>Resultados</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lSHC40iLB10" title="Video en YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </main>
+    <div class="button-container">
+        <a href="index.html" class="return-button">Regresar al Inicio</a>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/zoom.js"></script>
+</body>
+</html>
+

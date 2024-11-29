@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERAR UNA TENSIÓN INDUCIDA - LABORATORIOS DE FÍSICA II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        figure { margin: 0; padding: 0; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        section img { width: 200px; height: 150px; object-fit: cover; margin: 10px; transition: transform 0.3s ease; }
+        .zoomable:hover { transform: scale(1.2); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate-title">LABORATORIOS DE FÍSICA II</h1>
+        <p class="animate-subtitle">Grupo conformado por Juan Camilo Diaz, Jesus Manuel Arteaga, Jose Alejandro Pantoja y Sebastian Pretel</p>
+    </header>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="lab1.html">Laboratorio 1</a>
+        <a href="lab2.html">Laboratorio 2</a>
+        <a href="lab3.html">Laboratorio 3</a>
+        <a href="lab4.html">Laboratorio 4</a>
+        <a href="lab5.html">Laboratorio 5</a>
+        <a href="lab6.html">Laboratorio 6</a>
+        <a href="lab7.html">Laboratorio 7</a>
+        <a href="lab8.html">Laboratorio 8</a>
+        <a href="lab9.html">Laboratorio 9</a>
+        <a href="lab10.html" class="active">Laboratorio 10</a>
+    </nav>
+    <main>
+        <h2>GENERAR UNA TENSIÓN INDUCIDA</h2>
+        <section id="topicos">
+            <h3>Tópicos relacionados</h3>
+            <p>Inducción de tensión en una bobina mediante la variación del flujo magnético producido por un imán de barra.</p>
+        </section>
+        <section id="objetivos">
+            <h3>Objetivo</h3>
+            <p>Establecer el efecto que produce un imán cuando es movido en las proximidades de un solenoide o bobina.</p>
+        </section>
+        <section id="materiales">
+            <h3>Materiales a usar</h3>
+            <table>
+                <tr>
+                    <th>Materiales</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr><td>Bobina de 1600 espiras</td><td>1</td></tr>
+                <tr><td>Bobina de 400 espiras</td><td>1</td></tr>
+                <tr><td>Cables de conexión</td><td>2</td></tr>
+                <tr><td>Imán de barra</td><td>1</td></tr>
+                <tr><td>Multímetro Digital</td><td>1</td></tr>
+            </table>
+        </section>
+        <section id="procedimiento">
+            <h3>Montaje y procedimiento</h3>
+            <img src="evidencias/LAB10/MONTAJE.png" alt="Circuito eléctrico" class="zoomable">
+            <ol type="I">
+                <li>Conecta el multímetro, como voltímetro en la escala de los mV DC, a la bobina de 1600 espiras (tener en cuenta cable rojo al cable rojo de la bobina y cable azul al cable verde de la bobina).</li>
+                <li>Introduce el imán por el polo norte (rojo), en la bobina, observando lo que marca el voltímetro y el signo de la medida.</li>
+                <li>Deja el imán quieto en la bobina, registra los datos.</li>
+                <li>Saca el imán de la bobina, registra los datos.</li>
+                <li>Invierte los cables en el voltímetro, e identifica que pasa si vuelves a sacar el imán.</li>
+                <li>Regresa los cables a su configuración original, y ahora introduce el imán por el polo sur (invierte el imán).</li>
+                <li>Repite el paso anterior pero con los cables invertidos en el voltímetro.</li>
+                <li>Retorna los cables a su posición original, luego introduce el imán por el polo norte, primero lento y después más rápido, reporta el valor máximo de voltaje identificado.</li>
+                <li>Pon el voltímetro en el alcance más bajo pero en AC ( ) introduce y saca el imán de la bobina, apunta tus observaciones, además de los valores medidos.</li>
+                <li>Repite el paso II con la bobina de 400 espiras.</li>
+            </ol>
+            <h3>Tabla 1. Medidas de voltaje inducido para cada uno de los pasos</h3>
+            <table>
+                <tr>
+                    <th>Paso</th>
+                    <th>Voltaje inducido (mV)</th>
+                </tr>
+                <tr><td>II</td><td></td></tr>
+                <tr><td>III</td><td></td></tr>
+                <tr><td>IV</td><td></td></tr>
+                <tr><td>V</td><td></td></tr>
+                <tr><td>VI</td><td></td></tr>
+                <tr><td>VII</td><td></td></tr>
+                <tr><td>VIII</td><td></td></tr>
+                <tr><td>IX</td><td></td></tr>
+                <tr><td>X</td><td></td></tr>
+            </table>
+        </section>
+        <section id="evaluacion">
+            <h3>Evaluación</h3>
+            <ol>
+                <li>¿Qué se necesita para general una tensión eléctrica?</li>
+                <li>¿Hay diferencias en el signo de la tensión inducida cuando el imán se introduce por el polo norte y cuando se introduce por el polo sur?</li>
+                <li>¿Qué influencia tiene el sentido del movimiento del imán sobre el signo de la tensión medida por el voltímetro?</li>
+                <li>Compara el voltaje inducido con la bobina de 1600 espiras, respecto a la bobina de 400 vueltas.</li>
+                <li>¿Qué nos dice el hecho observado, que el multímetro mida valores positivos y negativos en la bobina?</li>
+                <li>¿Qué puedes concluir del paso VIII?</li>
+                <li>¿Por qué en el paso IX no se registraron valores negativos en el voltímetro?</li>
+            </ol>
+        </section>
+        <section id="bibliografia">
+            <h3>Bibliografía</h3>
+            <ul>
+                <li>Serway, R. Física Volumen 2. Ed. McGraw Hill</li>
+                <li>Tipler, P. Física Volumen 2. Ed. Reverté</li>
+                <li>Hewitt, P. Física Conceptual. Ed. Addison Wesley</li>
+                <li>Alonso, M. Finn, E. Física Volumen. Ed. Pearson</li>
+                <li>Halliday, D. Resnick R. Krane, K. Física Tomo 2. Ed. CECSA</li>
+                <li>Tippens, P. Física Fundamental. Ed. McGraw Hill</li>
+            </ul>
+        </section>
+        <section id="evidencias">
+            <h3>Evidencias</h3>
+            <img src="evidencias/LAB10/1.jpeg" alt="Evidencia 1" class="zoomable">
+            <img src="evidencias/LAB10/2.jpeg" alt="Evidencia 2" class="zoomable">
+            <img src="evidencias/LAB10/3.jpeg" alt="Evidencia 2" class="zoomable">
+        </section>
+        <section id="resultados">
+            <h3>Resultados</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/udzvDBQCE3Q" title="Video en YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </main>
+    <div class="button-container">
+        <a href="index.html" class="return-button">Regresar al Inicio</a>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/zoom.js"></script>
+</body>
+</html>
+
+

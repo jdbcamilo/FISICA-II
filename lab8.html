@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA LEY DE OHM - LABORATORIOS DE FÍSICA II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Asegura que las imágenes tengan el mismo tamaño */
+        section img {
+            width: 200px;    /* Ajusta el ancho a 200 píxeles */
+            height: 150px;   /* Ajusta la altura a 150 píxeles */
+            object-fit: cover; /* Mantiene la proporción y cubre el área sin distorsionar */
+            margin: 10px;     /* Espaciado entre imágenes */
+            transition: transform 0.3s ease; /* Efecto de transición al hacer hover */
+        }
+
+        /* Efecto de zoom */
+        .zoomable:hover {
+            transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+        }
+
+        /* Modal */
+        #zoom-modal {
+            display: none; /* Por defecto está oculto */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow: auto;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate-title">LABORATORIOS DE FÍSICA II</h1>
+        <p class="animate-subtitle">Grupo conformado por Juan Camilo Diaz, Jesus Manuel Arteaga, Jose Alejandro Pantoja y Sebastian Pretel</p>
+    </header>
+
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="lab1.html">Laboratorio 1</a>
+        <a href="lab2.html">Laboratorio 2</a>
+        <a href="lab3.html">Laboratorio 3</a>
+        <a href="lab4.html">Laboratorio 4</a>
+        <a href="lab5.html">Laboratorio 5</a>
+        <a href="lab6.html">Laboratorio 6</a>
+        <a href="lab7.html">Laboratorio 7</a>
+        <a href="lab8.html" class="active">Laboratorio 8</a>
+        <a href="lab9.html">Laboratorio 9</a>
+        <a href="lab10.html">Laboratorio 10</a>
+    </nav>
+
+    <main>
+        <h2>LA LEY DE OHM</h2>
+
+        <section id="topicos">
+            <h3>Tópicos relacionados</h3>
+            <p>Materiales óhmicos, materiales no óhmicos, resistividad eléctrica.</p>
+        </section>
+
+        <section id="objetivos">
+            <h3>Objetivo</h3>
+            <p>Estudiar la relación entre la diferencia de potencial, la intensidad de corriente y la resistencia eléctrica para materiales óhmicos y no óhmicos.</p>
+        </section>
+
+        <section id="materiales">
+            <h3>Materiales a usar</h3>
+            <table>
+                <tr>
+                    <th>Materiales</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <td>Panel de montajes</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Interruptor</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Conectores</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Resistencias (ver tabla 3)</td>
+                    <td>1 de cada valor</td>
+                </tr>
+                <tr>
+                    <td>Lampara de 12V/3W</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Cables de conexión</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Multímetro</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Fuente de alimentación</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="procedimiento">
+            <h3>Montaje y procedimiento</h3>
+            <h4>Esquema eléctrico</h4>
+            <img src="evidencias/LAB8/MONTAJE.png" alt="Diagrama del circuito" class="zoomable">
+            
+            <h4>Parte 1</h4>
+            <ol type="I">
+                <li>Mide el valor experimental de la resistencia de 100Ω y anótalo en la tabla 1 en la columna (R medida).</li>
+                <li>Monta el circuito según la figura 1, y pon como Rx la resistencia de 100 Ω o en su defecto otra.</li>
+                <li>Eleva la diferencia de potencial (∆V) desde 0V hasta 9V en pasos de 1,5 V y lleva los valores medidos de la intensidad de corriente a la tabla 1, en la columna de I(A).</li>
+            </ol>
+
+            <h3>Tabla 1. Valores medidos de la intensidad de corriente, con resistencia fija</h3>
+            <table>
+                <tr>
+                    <th>R (Ω) nominal</th>
+                    <th>R (Ω) medida</th>
+                    <th>∆V (V)</th>
+                    <th>I (A)</th>
+                    <th>∆V/I (Ω)</th>
+                </tr>
+                <tr>
+                    <td rowspan="7">100</td>
+                    <td rowspan="7"></td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1.5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4.5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7.5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <h4>Parte 2</h4>
+            <ol type="I">
+                <li>Repite la parte anterior, pero remplazando el resistor por una lámpara de 12V/3W y anota los datos en la tabla 2.</li>
+                <li>Observa el brillo de la lámpara durante el experimento y anota lo que observas.</li>
+            </ol>
+
+            <h3>Tabla 2. Valores medidos de la intensidad de corriente, con lámpara de 12V/3W</h3>
+            <table>
+                <tr>
+                    <th>∆V (V)</th>
+                    <th>I (A)</th>
+                    <th>∆V/I (Ω)</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1.5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4.5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7.5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <h4>Parte 3</h4>
+            <ol type="I">
+                <li>Mide el valor experimental de cada resistencia y anótalos en la tabla 3, respectivamente, en la columna (R medida).</li>
+                <li>Remplaza la lámpara por un resistor, empieza por el de menor resistencia.</li>
+                <li>Con ayuda del voltímetro, mantén una diferencia de potencial fija de 10V en los extremos del resistor.</li>
+                <li>Anota los valores de intensidad de corriente en la columna (I medida), de la tabla 3.</li>
+                <li>Repite el proceso para los demás resistores.</li>
+            </ol>
+
+            <h3>Tabla 3. Valores medidos de la intensidad de corriente, con diferencia de potencial fija</h3>
+            <table>
+                <tr>
+                    <th>∆V (V)</th>
+                    <th>R nominal (Ω)</th>
+                    <th>R medida (Ω)</th>
+                    <th>I (A)</th>
+                </tr>
+                <tr>
+                    <td rowspan="5">10</td>
+                    <td>100</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>150</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>220</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1k</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10k</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="evaluacion">
+            <h3>Evaluación</h3>
+            <ol>
+                <li>A partir de la tabla 1, realiza un gráfico de la intensidad de corriente I, en función de la diferencia de potencial ∆V. ¿Qué concluyes de esta gráfica?</li>
+                <li>Verifique su hipótesis encontrando el cociente ∆V/I, de la tabla 1, para todo par de valores de ∆V e I.</li>
+                <li>Realice el correspondiente ajuste a la gráfica I vs ∆V. ¿Cuál es la ecuación que liga las variables? ¿Cuál es el significado físico de la pendiente de esta gráfica?</li>
+                <li>Compare el valor de la pendiente, de la anterior gráfica, con el valor nominal del resistor y halle el error relativo. ¿Qué puede concluir?</li>
+                <li>A partir de los datos de la tabla 2, repita los puntos 1, 2, 3 y 4. Realice el análisis correspondiente.</li>
+                <li>Compare o contraste las gráficas, I vs ∆V, para la lámpara con la que se obtuvo para el resistor ¿Que puede concluir?</li>
+                <li>A partir de los datos de la tabla 3, realiza un gráfico de la intensidad de corriente I, en función de la resistencia medida (R medida). Realícele el análisis correspondiente a esta gráfica.</li>
+                <li>¿En general, cual es la ecuación que liga las variables ∆V, I y R?</li>
+                <li>Si la relación R=∆V/I es cierta para I≠0. ¿Bajo qué condición se aplica la ley de Ohm?</li>
+            </ol>
+        </section>
+
+        <section id="bibliografia">
+            <h3>Bibliografía</h3>
+            <ul>
+                <li>Serway, R. Física Volumen 2. Ed. McGraw Hill</li>
+                <li>Tipler, P. Física Volumen 2. Ed. Reverté</li>
+                <li>Hewitt, P. Física Conceptual. Ed. Addison Wesley</li>
+                <li>Alonso, M. Finn, E. Física Volumen. Ed. Pearson</li>
+                <li>Halliday, D. Resnick R. Krane, K. Física Tomo 2. Ed. CECSA</li>
+                <li>Tippens, P. Física Fundamental. Ed. McGraw Hill</li>
+            </ul>
+        </section>
+
+        <section id="evidencias">
+            <h3>Evidencias</h3>
+            <img src="evidencias/LAB8/1.jpeg" alt="Evidencia 1" class="zoomable">
+        <img src="evidencias/LAB8/2.jpeg" alt="Evidencia 2" class="zoomable">
+        <img src="evidencias/LAB8/3.jpeg" alt="Evidencia 3" class="zoomable">
+        <img src="evidencias/LAB8/4.jpeg" alt="Evidencia 4" class="zoomable">
+        <img src="evidencias/LAB8/5.jpeg" alt="Evidencia 5" class="zoomable">
+        </section>
+
+        <section id="resultados">
+            <h3>Resultados</h3>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0llm9ob1yy8" title="Video en YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <div id="zoom-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="zoomed-image">
+            <video class="modal-content" id="zoomed-video" controls></video>
+        </div>
+    </main>
+
+    <div class="button-container">
+        <a href="index.html" class="return-button">Regresar al Inicio</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/zoom.js"></script>
+</body>
+</html>
+
